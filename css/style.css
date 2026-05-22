@@ -10,7 +10,7 @@ body{
   font-family: "pacaembu", sans-serif;
   font-weight: 400;
   font-style: normal;
-  line-height: 125%;
+  line-height: normal;
 }
 
 .skip-link {
@@ -24,11 +24,11 @@ body{
   transition: top 0.3s ease;
 }
 
-/* Styling the navbar  */
+/* Styling the navbar */
 nav {
   background: var(--darkGreen);
   border-bottom: 0.5px solid var(--lightGreen);
-  padding: 0 2.5rem;
+  padding: 0 1.25rem;
   height: 60px;
   display: flex;
   align-items: center;
@@ -45,7 +45,7 @@ nav {
   display: flex;
   align-items: center;
   text-decoration: none;
-  margin-right: 2.5rem;
+  margin-right: 1rem;
   color: var(--cream);
   font-size: 22px;
   transition: opacity 0.2s;
@@ -57,12 +57,12 @@ nav {
 
 .nav-links > a:not(.logo-area),
 .dropdown summary {
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 400;
   letter-spacing: 0.06em;
   color: var(--cream);
   text-decoration: none;
-  padding: 0 1.25rem;
+  padding: 0 0.75rem;
   height: 60px;
   display: flex;
   align-items: center;
@@ -73,33 +73,21 @@ nav {
   background: none;
 }
 
-/* Add hover color */
-
-.dropdown summary::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 1.25rem;
-  right: 1.25rem;
-  height: 1.5px;
-  background: var(--darkGreen);
-  transform: scaleX(0);
-  transition: transform 0.25s ease;
-}
-
 .nav-links a:hover,
 .dropdown summary:hover {
   color: var(--lightGreen);
 }
 
-
-/* Add focus styling */
 .nav-links a:focus-visible,
 .dropdown summary:focus-visible {
   color: var(--lightGreen);
   border: 3px solid black;
 }
 
+.nav-links a:focus:not(:focus-visible),
+.dropdown summary:focus:not(:focus-visible) {
+  outline: none;
+}
 
 /* Dropdown */
 .dropdown {
@@ -109,13 +97,24 @@ nav {
 .dropdown summary {
   gap: 6px;
   user-select: none;
+  cursor: pointer;
 }
 
-/* Get rid of old arrow */
 .dropdown summary::-webkit-details-marker {
   display: none;
 }
 
+.dropdown summary::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0.75rem;
+  right: 0.75rem;
+  height: 1.5px;
+  background: var(--darkGreen);
+  transform: scaleX(0);
+  transition: transform 0.25s ease;
+}
 
 .dropdown-content {
   position: absolute;
@@ -176,14 +175,16 @@ footer .logo-area:focus:not(:focus-visible) {
 
 /* Styling main content */
 main {
-  margin: 1rem;
+  margin: .5rem;
 }
 
 
-main p, main a{
+main p, main a {
   font-family: "neue-haas-grotesk-text", sans-serif;
   font-weight: 400;
   font-style: normal;
+  padding-bottom: 5px;
+  font-size: 100%;
 }
 
 .hero {
@@ -199,6 +200,14 @@ main p, main a{
   line-height: normal;
   color: var(--cream);
   padding: 0px 24px;
+}
+
+.main a{
+  color: var(--pink);
+}
+
+main a:visited{
+  color: var(--darkGreen)
 }
 
 /* Card styling W3 Schools https://www.w3schools.com/howto/howto_css_cards.asp */
@@ -363,10 +372,23 @@ h1{
   font-size: 150%;
 }
 
-.text_and_image img{
+.text_and_image {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.text_and_image img {
   display: block;
   margin: auto;
   padding: 15px;
+}
+
+.text_and_image .images {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  justify-items: center;
 }
 
 .mask {
@@ -376,11 +398,64 @@ h1{
   mask-repeat: no-repeat;    
 }
 
-.grid img{
+.grid {
   display: grid;
-  grid-template-columns: 45% 45%;
-  width: 30vw;
-  height: 15vh;
-  object-fit: cover;
+  grid-template-columns: 1fr;
   gap: 15px;
+  justify-items: center;
+}
+
+.grid img{
+  width: 100%;
+  height: 35vh;
+  object-fit: cover;
+}
+
+
+@media screen and (min-width:500px){
+  nav {
+    padding: 0 2.5rem;
+  }
+
+  .logo-area {
+    margin-right: 2.5rem;
+  }
+
+  .nav-links > a:not(.logo-area),
+  .dropdown summary {
+    font-size: 100%;
+    padding: 0 1.25rem;
+  }
+
+  .dropdown summary::after {
+    left: 1.25rem;
+    right: 1.25rem;
+  }
+
+  .grid{
+    grid-template-columns: 30% 30% 30%;
+    gap: 20px;
+    justify-content: space-between;
+  }
+  .grid img{
+    width: 30vw;
+    height: 60vh;
+    object-fit: cover;
+  }
+
+  .text_and_image {
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .text_and_image:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  .text_and_image p,
+  .text_and_image .images {
+    flex: 1;
+  }
+
 }
