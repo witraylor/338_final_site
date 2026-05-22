@@ -202,21 +202,24 @@ main p, main a{
 }
 
 /* Card styling W3 Schools https://www.w3schools.com/howto/howto_css_cards.asp */
-.card, .fancy-card {
+.card:nth-child(even) {
   /* Add shadows to create the "card" effect */
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  background: var(--pink);
   transition: 0.3s;
   margin: 24px 0px;
+  border-radius: 5px;
+  padding: 12px;
 }
 
-/* On mouse-over, add a deeper shadow */
-.fancy-card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+.card:nth-child(odd) {
+  /* Add shadows to create the "card" effect */
+  background: var(--darkGreen);
+  transition: 0.3s;
+  margin: 24px 0px;
+  border-radius: 5px;
+  padding: 12px;
 }
 
-.fancy-card:focus {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
 
 /* Add some padding inside the card container */
 .container {
@@ -226,18 +229,21 @@ main p, main a{
 
 /* Style the buttons */
 .button { 
-  background-color: var(--pink); 
+  font-family: 'pacaembu', sans-serif;
+  background-color: var(--cream); 
   border: none; 
   border-radius: 70px;
-  color: white; 
-  padding: 20px 34px; 
+  color: var(--pink); 
+  padding: 12px 24px; 
   text-align: center; 
   text-decoration: none; 
   display: inline-block; 
-  font-size: 20px; 
+  font-size: 100%; 
   margin: 4px 2px; 
   cursor: pointer; 
 }
+
+
 
 /* Creating the carousel (from Mozilla https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Overflow/Carousels) */
 ul {
@@ -361,4 +367,20 @@ h1{
   display: block;
   margin: auto;
   padding: 15px;
+}
+
+.mask {
+  -webkit-mask-image: url(../images/Arch.png);
+  mask-image: url(../images/Arch.png);
+  mask-size:contain;
+  mask-repeat: no-repeat;    
+}
+
+.grid img{
+  display: grid;
+  grid-template-columns: 45% 45%;
+  width: 30vw;
+  height: 15vh;
+  object-fit: cover;
+  gap: 15px;
 }
