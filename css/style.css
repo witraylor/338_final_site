@@ -10,6 +10,7 @@ body{
   font-family: "pacaembu", sans-serif;
   font-weight: 400;
   font-style: normal;
+  line-height: 125%;
 }
 
 .skip-link {
@@ -174,6 +175,10 @@ footer .logo-area:focus:not(:focus-visible) {
 }
 
 /* Styling main content */
+main {
+  margin: 1rem;
+}
+
 
 main p, main a{
   font-family: "neue-haas-grotesk-text", sans-serif;
@@ -216,6 +221,22 @@ main p, main a{
 /* Add some padding inside the card container */
 .container {
   padding: 2px 16px;
+}
+
+
+/* Style the buttons */
+.button { 
+  background-color: var(--pink); 
+  border: none; 
+  border-radius: 70px;
+  color: white; 
+  padding: 20px 34px; 
+  text-align: center; 
+  text-decoration: none; 
+  display: inline-block; 
+  font-size: 20px; 
+  margin: 4px 2px; 
+  cursor: pointer; 
 }
 
 /* Creating the carousel (from Mozilla https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Overflow/Carousels) */
@@ -330,4 +351,14 @@ li::scroll-marker {
 
 li::scroll-marker:target-current {
   background-color: black;
+}
+
+h1{
+  font-size: 150%;
+}
+
+.text_and_image img{
+  display: block;
+  margin: auto;
+  padding: 15px;
 }
