@@ -19,7 +19,7 @@
         <a class="skip-link" href="#main">Skip to Main Content</a>
         <nav>
         <div class="nav-links">
-            <a class="logo-area" href="./index.html">
+            <a class="logo-area" href="./index.html" aria-label="home link">
                 <i class="fa-solid fa-clover"></i> 
             </a>
             <details class="dropdown">
@@ -36,8 +36,11 @@
         </div>
         </nav>
     </header>
-    <main id="main">
-        <div class="grid">
+    <main id="main" tabindex="-1">
+        <div class="hero_gallery">
+            <h1>Photo Gallery</h1>
+        </div>
+        <div class="gallery">
             <a href="images/cows.jpg"
             data-lightbox="group"
             data-caption="Cows at the Cliffs of Moher">
@@ -98,7 +101,7 @@
             <a href="images/fish.jpg"
             data-lightbox="group"
             data-caption="Camille Souter, The Slaughtered Cow, Ten Minutes Dead">
-                <img src="images/fish.jpg" width="200" alt="An oil painting of a dead animal, with other animal corpses hanging in the background. The painting hangs on a red wall">
+                <img src="images/fish.jpg" width="200" alt="An oil painting of a dead animal, with other animal corpses hanging in the background. The painting hangs on a red wall.">
             </a>
 
             <a href="images/ramen.jpg"
@@ -118,10 +121,24 @@
             data-caption="A Guinness Stoutie">
                 <img src="images/stoutie.jpg" width="200" alt="Willow and Anna's faces printed on top of Guinness Stoutie.">
             </a>
-<!-- Add deer photos!!! -->
+            
+            <a href="images/deer.JPG"
+            data-lightbox="group"
+            data-caption="A deer at Phoenix Park">
+                <img src="images/deer.JPG" width="200" alt="A deer close to the camera in Phoenix Park.">
             </a>
         </div>
     </main>
+    <footer>
+        <p>
+            Created by Willow Traylor 2026
+            <a class="logo-area" href="./index.html" aria-label="home link">
+            <i class="fa-solid fa-clover"></i> 
+        </a>
+        <a class="top-button" href="#top">Back to top</a>
+        </p>
+    </footer>
+
     <script src="dist/js/lightbox-plus-jquery.js"></script>
 </body>
 </html>

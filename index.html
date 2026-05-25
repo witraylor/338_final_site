@@ -13,12 +13,12 @@
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://kit.fontawesome.com/bfff4fc78f.js" crossorigin="anonymous"></script></script>
 </head>
-<body>
+<body class="home" id="top">
     <header>
         <a class="skip-link" href="#main">Skip to Main Content</a>
         <nav>
         <div class="nav-links">
-            <a class="logo-area" href="./index.html">
+            <a class="logo-area" href="./index.html" aria-label="home link">
                 <i class="fa-solid fa-clover"></i> 
             </a>
             <details class="dropdown">
@@ -35,53 +35,38 @@
         </div>
         </nav>
     </header>
-    <main id="main">
+    <main id="main" tabindex="-1">
         <div class="hero">
-            <h1>Three Weeks in Ireland</h1>
+            <h1></h1>
         </div>
-        <div class="card_container">
-            <div class="card">
-                <div class="container">
-                    <img src="" width="200" alt="">
-                    <a href="./imma.html" class="button">Irish Museum of Modern Art</a>
+        <div class="home-content">
+            <div class="card_container">
+                <div class="card">
+                    <div class="container">
+                        <img src="./images/imma.jpg" width="200" alt="The outside of the IMMA." >
+                        <a href="./imma.html" class="button">Irish Museum of Modern Art</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="container">
+                        <img src="./images/cat_water.jpg" width="200" alt="A black cat peering over a harbor.">
+                        <a href="./galway.html" class="button">Galway</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="container">
+                        <img src="images/pasta.jpg" width="200" alt="A plate of spaghetti and a glass of white wine.">
+                        <a href="./food-and-drink.html" class="button">Eats</a>
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <div class="container">
-                    <img src="" width="200" alt="">
-                    <a href="./galway.html" class="button">Galway</a>
+            <div class="about">
+                <h2>About this Site</h2>
+                <div>
+                    <p>
+                        This site is part of a 3 week study abroad web development and accessibility course in Dublin, Ireland. Explore to see all of the fun locations, delicious food, and rich culture Ireland has to offer. 
+                    </p>
                 </div>
-            </div>
-            <div class="card">
-                <div class="container">
-                    <img src="images/pasta.jpg" width="200" alt="A plate of spaghetti and a glass of white wine." class="mask">
-                    <a href="./food-and-drink.html" class="button">Eats</a>
-                </div>
-            </div>
-        </div>
-        <!-- Image carousel -->
-        <div class="carousel">
-            <ul>
-            <li data-accName="Item 1">
-                <h2>Page 1</h2>
-            </li>
-            <li data-accName="Item 2">
-                <h2>Page 2</h2>
-            </li>
-            <li data-accName="Item 3">
-                <h2>Page 3</h2>
-            </li>
-            <li data-accName="Item 4">
-                <h2>Page 4</h2>
-            </li>
-            </ul>
-        </div>
-        <div class="about">
-            <h2>About this Site</h2>
-            <div>
-                <p>
-                    This site is part of a 3 week study abroad web development and accessibility course in Dublin, Ireland. Explore to see all of the fun locations, delicious food, and rich culture Ireland has to offer. 
-                </p>
             </div>
         </div>
     </main>
@@ -91,6 +76,7 @@
             <a class="logo-area" href="./index.html" aria-label="home link">
             <i class="fa-solid fa-clover"></i> 
         </a>
+        <a class="top-button" href="#top">Back to top</a>
         </p>
     </footer>
 </body>
