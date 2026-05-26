@@ -25,7 +25,7 @@ body{
   left: 0;
   top: 0;
   padding: 3px;
-  background-color: white;
+  background-color: var(--cream);
   border: 3px solid var(--pink);
   color: var(--pink);
   padding: 10px;
@@ -82,7 +82,7 @@ nav {
 
 .nav-links a:hover,
 .dropdown summary:hover {
-  color: var(--lightPink);
+  color: var(--lightGreen);
 }
 
 .nav-links a:focus-visible,
@@ -104,7 +104,6 @@ nav {
 .dropdown summary {
   gap: 6px;
   user-select: none;
-  cursor: pointer;
 }
 
 .dropdown summary::-webkit-details-marker {
@@ -195,6 +194,10 @@ footer a{
   margin: 4px 2px; 
 }
 
+.top-button:hover{
+  background-color: var(--lightGreen); 
+}
+
 .top-button:focus{
   border: 3px solid var(--black);
 }
@@ -212,6 +215,11 @@ main p, main a {
   font-style: normal;
   padding-bottom: 15px;
   font-size: 120%;
+  line-height: 1.3;
+}
+
+main a {
+  font-size: 100%;
 }
 
 main h2{
@@ -221,9 +229,20 @@ main h2{
 .hero {
   width: 100vw;
   height: 90vh;
-  background: url("../images/cliffs2.jpg"), black;
+  background: url('../images/deer_bright.jpeg');
   background-size: cover;
-  background-position: center;
+  background-position: 50% 90%;
+}
+
+.hero h1{
+  font-size: 500%;
+  line-height: normal;
+  color: var(--pink);
+  padding: 2vh 24px 0px;
+}
+
+.hero img{
+  display: none;
 }
 
 .hero-image-galway {
@@ -288,14 +307,6 @@ main h2{
   padding: 20vh 5vw;
   font-size: 300%;
   color: var(--cream)
-}
-
-
-.hero h1{
-  font-size: 1000%;
-  line-height: normal;
-  color: var(--cream);
-  padding: 0px 24px;
 }
 
 main a{
@@ -508,6 +519,14 @@ h1{
 
   .galway, .food_and_drink, .imma, .gallery {
     margin: 1rem 10rem;
+  }
+
+  .hero {
+    background-position: 0% 60%;
+  }
+
+  .hero h1{
+    font-size: 700%;
   }
 
   .hero-image-imma, .hero-image-eats, .hero-image-galway, .hero_gallery{
